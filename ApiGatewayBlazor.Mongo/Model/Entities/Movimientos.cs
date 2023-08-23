@@ -19,19 +19,19 @@ namespace ApiGatewayBlazor.Mongo.Model.Entities
 
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; } = string.Empty;
-        public string ProductoId { get; set; } = string.Empty;
-        public string ProductoDescripcion { get; set; } = string.Empty;
+        public string Id { get; set; } 
+        public string ProductoId { get; set; } 
+        public string ProductoDescripcion { get; set; } 
 
         //[BsonRepresentation("like")]
         //public string Like { get; set; } = string.Empty;
         //[BsonRepresentation("dislike")]
-        public string Dislike { get; set; } = string.Empty;
-        public string Venta { get; set; } = string.Empty;
+        public string Dislike { get; set; } 
+        public string Venta { get; set; } 
 
-        public string ClienteId { get; set; } = string.Empty;
+        public string ClienteId { get; set; } 
 
-        public string ClienteNombre { get; set; } = string.Empty;
+        public string ClienteNombre { get; set; } 
 
 }
 }

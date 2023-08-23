@@ -1,8 +1,13 @@
+using ApiGatewayBlazor.SqlServer.Datos;
 using ApiGatewayBlazor.SqlServer.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
 
 // Add services to the container.
 
@@ -11,8 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<VentasContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
+
 
 var app = builder.Build();
 
