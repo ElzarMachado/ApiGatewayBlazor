@@ -2,17 +2,35 @@
 
 <PageTitle>Counter</PageTitle>
 
-<h1>Counter</h1>
+<h1>Piedrosos</h1>
 
-<p role="status">Current count: @currentCount</p>
+<div class="card" style="width: 18rem;">
+    <img src="img/piedralava.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Piedra de Lava</h5>
+        <p class="card-text">Directo del popocatepetl.</p>
+        <button href="#" class="btn btn-primary">Comprar</button>
+        <p role="status">Current count: @currentCount</p>
+        <button class="btn btn-primary" @onclick="IncrementCount">like</button>
+        <p role="status">Current count: @currentCount2</p>
+        <button class="btn btn-primary" @onclick="IncrementCount2">dis</button>
+
+    </div>
+</div>
+
+
+@* <p role="status">Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">like</button>
 
 <p role="status">Current count: @currentCount2</p>
-<button class="btn btn-primary" @onclick="IncrementCount2">dis</button>
+<button class="btn btn-primary" @onclick="IncrementCount2">dis</button> *@
+
 
 
 @code {
+
+
     private int currentCount = 0;
 
     private void IncrementCount()

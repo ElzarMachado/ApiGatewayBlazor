@@ -2,8 +2,79 @@
 
 <PageTitle>Index</PageTitle>
 
-<h1>Productos</h1>
+<h1>Piedrosos</h1>
+<h2>Productos para todos los gustos</h2>
 
-Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<div class="card" style="width: 18rem;">
+    <img src="img/piedralava.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Piedra de Lava</h5>
+        <p class="card-text">Directo del popocatepetl.</p>
+        <button href="#" class="btn btn-primary">Comprar por 50 pesos</button>
+        <p role="status">Numero de likes: @currentCount</p>
+        <button class="btn btn-primary" @onclick="IncrementCount">Me gusta</button>
+        <p role="status">Numero de dislikes: @currentCount2</p>
+        <button class="btn btn-primary" @onclick="IncrementCount2">No me gusta</button>
+
+    </div>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+    <img src="img/cerrodelacampana.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Piedra del Cerro de la Campana</h5>
+        <p class="card-text">Hace ruido cuando la golpeas con otra del mismo cerro.</p>
+        <a href="#" class="btn btn-primary">Comprar por 30 pesos</a>
+        <p role="status">Current count: @currentCount</p>
+        <button class="btn btn-primary" @onclick="IncrementCount3">Me gusta</button>
+        <p role="status">Numero de dislikes: @currentCount2</p>
+        <button class="btn btn-primary" @onclick="IncrementCount4">No me gusta</button>
+
+    </div>
+</div>
+
+@* <p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">like</button>
+
+<p role="status">Current count: @currentCount2</p>
+<button class="btn btn-primary" @onclick="IncrementCount2">dis</button> *@
+
+
+
+@code {
+
+
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+
+    }
+
+    private int currentCount2 = 0;
+
+    private void IncrementCount2()
+    {
+        currentCount2++;
+
+    }
+
+    private int currentCount3 = 0;
+
+    private void IncrementCount3()
+    {
+        currentCount++;
+
+    }
+    private int currentCount4 = 0;
+
+    private void IncrementCount4()
+    {
+        currentCount++;
+
+    }
+}
