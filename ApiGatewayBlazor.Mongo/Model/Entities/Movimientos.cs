@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver;
 using System.Diagnostics.Contracts;
 
 
@@ -19,19 +20,28 @@ namespace ApiGatewayBlazor.Mongo.Model.Entities
 
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; } 
-        public string ProductoId { get; set; } 
-        public string ProductoDescripcion { get; set; } 
+        public string Id { get; set; }
+        [BsonElement("productoId")]
+        public string? ProductoId { get; set; }
+
+        [BsonElement("ProductoDescripcion")]
+        public string? ProductoDescripcion { get; set; }
 
         //[BsonRepresentation("like")]
         //public string Like { get; set; } = string.Empty;
         //[BsonRepresentation("dislike")]
-        public string Dislike { get; set; } 
-        public string Venta { get; set; } 
+        [BsonElement("Venta")]
+        public string? Venta { get; set; }
+        [BsonElement("clienteId")]
 
-        public string ClienteId { get; set; } 
+        public string? ClienteId { get; set; }
+        [BsonElement("clienteNombre")]
 
-        public string ClienteNombre { get; set; } 
+        public string? ClienteNombre { get; set; }
 
-}
+        [BsonElement("tipoDeMovimiento")]
+        public bool Likes { get; set; }
+        public bool DisLikes { get; set; }
+
+    }
 }
